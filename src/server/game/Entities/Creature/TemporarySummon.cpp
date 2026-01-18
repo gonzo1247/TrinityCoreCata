@@ -151,7 +151,7 @@ void TempSummon::Update(uint32 diff)
     */
 }
 
-void TempSummon::InitStats(uint32 duration)
+void TempSummon::InitStats(uint32 /*duration*/)
 {
     /*
     ASSERT(!IsPet());
