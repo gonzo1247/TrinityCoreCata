@@ -210,7 +210,7 @@ void TempSummon::UpdateObjectVisibilityOnCreate()
     WorldObject::UpdateObjectVisibility(true);
 }
 
-void TempSummon::SetTempSummonType(TempSummonType type)
+void TempSummon::SetTempSummonType(TempSummonType /*type*/)
 {
     /*
     m_type = type;
@@ -272,7 +272,7 @@ Minion::Minion(SummonPropertiesEntry const* properties, Unit* owner, bool isWorl
     m_unitTypeMask |= UNIT_MASK_MINION;
 }
 
-void Minion::InitStats(uint32 duration)
+void Minion::InitStats(uint32 /*duration*/)
 {
     /*
     TempSummon::InitStats(duration);
@@ -362,7 +362,7 @@ Guardian::Guardian(SummonPropertiesEntry const* properties, Unit* owner, bool is
     */
 }
 
-void Guardian::InitStats(uint32 duration)
+void Guardian::InitStats(uint32 /*duration*/)
 {
     /*
     Minion::InitStats(duration);
