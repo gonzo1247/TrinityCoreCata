@@ -14036,13 +14036,17 @@ bool Player::CanRewardQuest(Quest const* quest, bool msg)
 
     // dungeon finder quests cannot be rewarded when hit weekly currency limit
     if (quest->IsDFQuest())
+    {    
         for (uint8 i = 0; i < QUEST_REWARD_CURRENCY_COUNT; i++)
+        {
             if (CurrencyTypesEntry const* currency = sCurrencyTypesStore.LookupEntry(quest->RewardCurrencyId[i]))
             {
                 uint32 weekCap = GetCurrencyWeekCap(currency);
                 if (weekCap > 0 && GetCurrencyOnWeek(quest->RewardCurrencyId[i], false) >= weekCap)
                     return false;
             }
+        }
+    }
 
     return true;
 }
